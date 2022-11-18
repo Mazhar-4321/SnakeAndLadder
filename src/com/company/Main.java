@@ -20,7 +20,7 @@ public class Main {
                     startPosition = startPosition + dice > 100 ? startPosition : startPosition + dice;
                     break;
                 case SNAKE:
-                    startPosition -= startPosition;
+                    startPosition -= dice;
                     startPosition = startPosition < 0 ? 0 : startPosition;
                     break;
             }
