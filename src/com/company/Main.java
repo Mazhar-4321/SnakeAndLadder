@@ -17,7 +17,7 @@ public class Main {
                 case NO_PLAY:
                     break;
                 case LADDER:
-                    startPosition += dice;
+                    startPosition = startPosition + dice > 100 ? startPosition : startPosition + dice;
                     break;
                 case SNAKE:
                     startPosition -= startPosition;
