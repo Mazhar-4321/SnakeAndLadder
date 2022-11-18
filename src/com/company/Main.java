@@ -6,5 +6,6 @@ public class Main {
 	// write your code here
         System.out.println("Snake And Ladder Game");
         int startPosition=0;
+        int dice=(int)Math.floor((Math.random()*10)%6)+1;
     }
 }
