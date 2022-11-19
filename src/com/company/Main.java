@@ -7,7 +7,6 @@ public class Main {
     static final int WINNING_POSITION = 100;
 
     public static void main(String[] args) {
-        // write your code here
         System.out.println("Snake And Ladder Game");
         int startPosition = 0;
         while (startPosition <= 100) {
