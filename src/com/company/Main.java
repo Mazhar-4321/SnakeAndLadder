@@ -25,11 +25,7 @@ public class Main {
             int option = (int) Math.floor((Math.random() * 10) % 3) + 1;
             switch (option) {
                 case NO_PLAY:
-                    if (currentPlayer == PLAYER_1) {
-                        currentPlayer = PLAYER_2;
-                    } else {
-                        currentPlayer = PLAYER_1;
-                    }
+                    currentPlayer = currentPlayer == PLAYER_1 ? PLAYER_2 : PLAYER_1;
                     break;
                 case LADDER:
                     if (currentPlayer == PLAYER_1) {
