@@ -9,18 +9,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Snake And Ladder Game");
         int startPosition = INITIAL_POSITION;
-        while (startPosition != WINNING_POSITION) {
-            int dice = (int) Math.floor((Math.random() * 10) % 6) + 1;
-            int option = (int) Math.floor((Math.random() * 10) % 3) + 1;
-            switch (option) {
-                case LADDER:
-                    startPosition = startPosition + dice > WINNING_POSITION ? startPosition : startPosition + dice;
-                    break;
-                case SNAKE:
-                    startPosition -= dice;
-                    startPosition = startPosition < INITIAL_POSITION ? INITIAL_POSITION : startPosition;
-                    break;
-            }
-        }
+        int dice = (int) Math.floor((Math.random() * 10) % 6) + 1;
     }
+}
 }
