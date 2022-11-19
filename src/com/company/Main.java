@@ -29,7 +29,7 @@ public class Main {
             positionList.add(startPosition);
             diceCount++;
         }
-        System.out.println("Dice Count="+diceCount+","+"Position List="+positionList);
+        System.out.println("Dice Count=" + diceCount + "," + "Position List=" + positionList);
     }
 }
 }
