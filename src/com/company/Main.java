@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.*;
+
 public class Main {
     static final int LADDER = 2;
     static final int SNAKE = 3;
@@ -10,6 +12,24 @@ public class Main {
         System.out.println("Snake And Ladder Game");
         int startPosition = INITIAL_POSITION;
         int dice = (int) Math.floor((Math.random() * 10) % 6) + 1;
+        ArrayList<Integer> positionList = new ArrayList<>();
+        int diceCount = 0;
+        while (startPosition != WINNING_POSITION) {
+            int dice = (int) Math.floor((Math.random() * 10) % 6) + 1;
+            int option = (int) Math.floor((Math.random() * 10) % 3) + 1;
+            switch (option) {
+                case LADDER:
+                    startPosition = startPosition + dice > WINNING_POSITION ? startPosition : startPosition + dice;
+                    break;
+                case SNAKE:
+                    startPosition -= dice;
+                    startPosition = startPosition < INITIAL_POSITION ? INITIAL_POSITION : startPosition;
+                    break;
+            }
+            positionList.add(startPosition);
+            diceCount++;
+        }
+        System.out.println("Dice Count="+diceCount+","+"Position List="+positionList);
     }
 }
 }
